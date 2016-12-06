@@ -138,22 +138,22 @@ function reverse(str){
 //Next Problem
 
 
-var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-/*
-  Here we're going to write a function that mimics going shopping and checking things off of our grocery list,
-  and adding new items to our list.
-
-  Write a function called removeItem that is given two arguments, the first is myGroceryList, and the
-  second is an item to remove from myGroceryList. If the second argument (or the item to add or remove) matches an item in myGroceryList,
-  remove that item from the your grocery list and return the new, updated grocery list.
-
-  Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList
-  and the second is an item to add to your grocery list. In addItem add the item you passed in to
-  myGroceryList then return the new, updated grocery list.
-
-  In both the removeItem function and the addItem function, you will also need to check for valid aurguments. Specrunner will try to call your functions without passing in valid aurguments. When this happens, you will need to respond by returning an empty array.
-*/
-
+// var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+// /*
+//   Here we're going to write a function that mimics going shopping and checking things off of our grocery list,
+//   and adding new items to our list.
+//
+//   Write a function called removeItem that is given two arguments, the first is myGroceryList, and the
+//   second is an item to remove from myGroceryList. If the second argument (or the item to add or remove) matches an item in myGroceryList,
+//   remove that item from the your grocery list and return the new, updated grocery list.
+//
+//   Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList
+//   and the second is an item to add to your grocery list. In addItem add the item you passed in to
+//   myGroceryList then return the new, updated grocery list.
+//
+//   In both the removeItem function and the addItem function, you will also need to check for valid aurguments. Specrunner will try to call your functions without passing in valid aurguments. When this happens, you will need to respond by returning an empty array.
+// */
+//
   //Code Here
 function removeItem(myGroceryList, item){
 if(!myGroceryList){
@@ -172,17 +172,17 @@ if(!list){
   list.push(item);
   return list;
 }
-//removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-//addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
-
-
-
-//Next Problem
-
-
-
-//Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
-
+// //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+// //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
+//
+//
+//
+// //Next Problem
+//
+//
+//
+// //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
+//
   //Code Here
 function maker(){
   var array = [];
@@ -193,10 +193,10 @@ function maker(){
  }
 
 
-
-//Next Problem
-
-
+//
+// //Next Problem
+//
+//
 var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
@@ -227,9 +227,9 @@ for(var i = 0; i < num1; i++){
 for(var i = 0; i < num2; i++){
   arr2.push(i);
 }
-//Above is some code that adds a random number of values to both arr1 and arr2.
-//Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
-
+// //Above is some code that adds a random number of values to both arr1 and arr2.
+// //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
+//
   //Code Here
 function longer(arr1, arr2){
   if(arr1 > arr2){
@@ -240,22 +240,22 @@ function longer(arr1, arr2){
  }
 }
 
-/*As a continuation of the previous problem, write another function called 'both'.
-  Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
-  'both' should return a new array with the matching numbers found in both arr1 and arr2.
-  Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
-*/
-
+// /*As a continuation of the previous problem, write another function called 'both'.
+//   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
+//   'both' should return a new array with the matching numbers found in both arr1 and arr2.
+//   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
+// */
+//
   //Code Here
   function both(arr1, arr2) {
      var bothArray = []
      for(var i = 0; i < arr1.length; i ++){
-       for(var j = 0; i < arr2.length; i ++){
-         if (arr1 === arr2){
-           bothArray.push(arr1);
-         };
-       };
-     };
+       for(var j = 0; j < arr2.length; j ++){
+         if (arr1[i] === arr2[j]){
+           bothArray.push(arr1[i]);
+         }
+       }
+     }
   return bothArray;
 }
 
@@ -306,9 +306,9 @@ Loop through your devMountainEmployees until you find cahlan, then remove him fr
 
   //Code Here
 for(var i = 0; i < devMountainEmployees.length; i ++){
-  if(devMountainEmployees[i] === 'cahlan'){
-    devMountainEmployees.remove(devMountainEmployees[cahlan]);
-  // } return ;
+  if(devMountainEmployees[i].name === 'Cahlan'){
+    devMountainEmployees.splice(i,1);
+  i--;}
 }
 
 
@@ -384,20 +384,20 @@ var user3 = {
 };
 users.push(user1,user2,user3);
 
-/*Now you have a very common data structure. Twitter is a good use case.
-It's easy to imagine that your followers list on Twitter is an Array full or objects
-and those objects contain properties about the specific person you follow.*/
-
-/*Now let's say that Tyler decided to delete his account. Loop through your array of
-objects until you find Tyler's account (use tylermcginnis33@gmail.com to find him).
-Once you find the particular index he's located in, delete him from the array.*/
-
+// /*Now you have a very common data structure. Twitter is a good use case.
+// It's easy to imagine that your followers list on Twitter is an Array full or objects
+// and those objects contain properties about the specific person you follow.*/
+//
+// /*Now let's say that Tyler decided to delete his account. Loop through your array of
+// objects until you find Tyler's account (use tylermcginnis33@gmail.com to find him).
+// Once you find the particular index he's located in, delete him from the array.*/
+//
   //Code Here
 for(var i = 0; i < users.length; i ++){
   if(users[i].email === 'tylermcginnis33@gmail.com') {
       users.splice(i, 1);
 
-    }break;
+    }
   }
-}
+
 //The activity we just did is very much how data works in 'the real world'.
